@@ -12,7 +12,6 @@ export default function Form(){
         favColor : ""
     })
 
-    console.log(formData)
 
     function handleChange(event){                               // this event object comes with thie fucntion by default
 
@@ -28,8 +27,14 @@ export default function Form(){
     
     }
 
+    function handleSubmition(event){
+        event.preventDefault()                                  // this prevents the web to send data by default. we wanna run our own function
+        console.log(formData)                                   // we just logging the data now. But we will send this formdata in api usually or do whatever we want
+    }
+
     return (
-        <form>
+        <form onSubmit={handleSubmition}>
+            
             <input 
                 type="text"
                 placeholder="First Name"
@@ -130,6 +135,9 @@ export default function Form(){
                 <option value="violet">Violet</option>
             </select>
             
+            <br/>
+            
+            <button>Submit</button>
 
         </form>
     )
