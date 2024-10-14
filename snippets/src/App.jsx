@@ -1,11 +1,11 @@
-import Form from "./components/Form"
+import ApiStuff from "./components/fetching"
 import './style.css'
 
 function App() {
 
   return (
     <>
-      <Form />
+      <ApiStuff />
     </>
   )
 }
