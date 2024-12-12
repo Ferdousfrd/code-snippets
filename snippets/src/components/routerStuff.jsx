@@ -3,7 +3,7 @@ import './style.css'
 import Form from './components/Form'
 import ApiStuff from './components/fetching';
 
-function App() {
+function Router() {
 
   return (
     <>
@@ -24,4 +24,4 @@ function App() {
   )
 }
 
-export default App
+export default Router
